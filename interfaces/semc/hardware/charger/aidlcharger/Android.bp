@@ -1,0 +1,20 @@
+aidl_interface {
+    name: "vendor.semc.hardware.aidlcharger",
+    system_ext_specific: true,
+    srcs: [
+        "vendor/semc/hardware/aidlcharger/*.aidl",
+    ],
+    unstable: true,
+    backend: {
+        java: {
+            sdk_version: "module_current",
+            min_sdk_version: "30",
+            lint: {
+                // Disable linter to avoid error about fixed size arrays.
+                // Interface will only be accessed on devices >= U.
+                enabled: false,
+            },
+        },
+    },
+    owner: "sony",
+}
