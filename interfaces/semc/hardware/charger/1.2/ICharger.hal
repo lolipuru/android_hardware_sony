@@ -1,0 +1,19 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.charger@1.2;
+
+import vendor.semc.hardware.charger@1.1::ICharger;
+import vendor.semc.hardware.charger@1.2::IChargerCallback;
+
+interface ICharger extends @1.1::ICharger {
+    setOffModeSmartChargeEnabled(bool enabled);
+    getSmartChargeAction() generates (int32_t action);
+    setOffModeSmartChargeStopLevel(int32_t level);
+    getOffModeSmartChargeStopLevel() generates (int32_t level);
+    getOffModeSmartChargeEnabled() generates (bool enabled);
+    registerCallback(IChargerCallback callback);
+};

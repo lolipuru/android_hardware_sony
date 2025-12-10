@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.charger@1.2;
+
+interface IChargerCallback {
+    onBatteryShareStatusChanged(int32_t status);
+    onRxNegotiationStart(int32_t state);
+    onBatteryShareStart(int32_t param);
+};
